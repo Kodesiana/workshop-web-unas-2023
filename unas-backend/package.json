@@ -9,6 +9,9 @@
     "lint": "rome check src",
     "format": "rome format --write src"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

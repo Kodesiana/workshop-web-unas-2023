@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { Router } from "express";
+import { v4 as uuid } from "uuid";
 
 import db from "../database";
 import config from "../config";
@@ -8,8 +9,47 @@ import * as schemas from "./users_schemas";
 
 const router = Router();
 
+router.post("/api/v1/users/register", async (req, res) => {
+	// get the request body
+	const model = await schemas.RegisterSchema.safeParseAsync(req.body);
+	if (!model.success) {
+		return res.status(400).json(model.error);
+	}
+
+	// find the user
+	const user = await db.user.findFirst({
+		where: {
+			email: model.data.email.toLowerCase(),
+		},
+	});
+
+	// check if the user exists
+	if (user) {
+		return res.status(401).json({
+			message: "User already exists",
+		});
+	}
+
+	// create user
+	const registeredUser = await db.user.create({
+		data: {
+			id: uuid(),
+			name: model.data.name,
+			email: model.data.email.toLowerCase(),
+			hashedPassword: await helper.hashPassword(model.data.password),
+		},
+	});
+
+	// return the response
+	return res.json({
+		id: registeredUser.id,
+		name: registeredUser.name,
+		email: registeredUser.email,
+	});
+});
+
 router.post("/api/v1/users/login", async (req, res) => {
-	// get the search parameters
+	// get the request body
 	const model = await schemas.LoginSchema.safeParseAsync(req.body);
 	if (!model.success) {
 		return res.status(400).json(model.error);
@@ -30,7 +70,7 @@ router.post("/api/v1/users/login", async (req, res) => {
 	}
 
 	// check if the password is correct
-	if (!helper.checkPassword(model.data.password, user.hashedPassword)) {
+	if (!(await helper.checkPassword(model.data.password, user.hashedPassword))) {
 		return res.status(401).json({
 			message: "Credentials is invalid",
 		});

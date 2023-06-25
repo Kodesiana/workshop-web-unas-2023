@@ -3,6 +3,21 @@ import { Request, Response, NextFunction } from "express";
 
 import config from "./config";
 
+export function errorHandler() {
+	return function innerErrorHandler(
+		error: Error,
+		req: Request,
+		res: Response,
+		next: NextFunction,
+	) {
+		if (error) {
+			res.status(500).json({ message: error.message });
+		} else {
+			next();
+		}
+	};
+}
+
 export function jwtAuth() {
 	return function innerAuth(req: Request, res: Response, next: NextFunction) {
 		try {

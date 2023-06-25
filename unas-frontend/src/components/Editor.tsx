@@ -7,7 +7,7 @@ export type EditorProps = {
 
 export function Editor({ editor }: EditorProps) {
 	return (
-		<RichTextEditor editor={editor} h={400}>
+		<RichTextEditor editor={editor}>
 			<RichTextEditor.Toolbar sticky stickyOffset={60}>
 				<RichTextEditor.ControlsGroup>
 					<RichTextEditor.Bold />

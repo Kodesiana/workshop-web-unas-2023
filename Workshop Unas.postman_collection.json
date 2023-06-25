@@ -1,0 +1,831 @@
+{
+	"info": {
+		"_postman_id": "c9cdaa81-f428-4ec8-ae68-b06afb21d91d",
+		"name": "Workshop Unas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27514648"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fahmi@kodesiana.com\",\r\n    \"password\": \"fahmi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/users/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"fahmi@kodesiana.com\",\r\n    \"password\": \"fahmi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/users/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-nF6XBVMyXPhBfv3VREok0I9Ornc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:03:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"8a10605f-184d-43eb-bb26-9a459b0172ba\",\n    \"name\": \"Fahmi\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhhMTA2MDVmLTE4NGQtNDNlYi1iYjI2LTlhNDU5YjAxNzJiYSIsIm5hbWUiOiJGYWhtaSIsImlhdCI6MTY4NzY1MTQyNiwiZXhwIjoxNjg3NjU1MDI2LCJhdWQiOiJVbmFzIiwiaXNzIjoiVW5hcyJ9.1zfQcZ_9zgleNvZ7f751rHwkAJdRdKB4ZIEAxKF_09s\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fahmi\",\r\n    \"email\": \"fahmi@kodesiana.com\",\r\n    \"password\": \"fahmi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/users/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fahmi\",\r\n    \"email\": \"fahmi@kodesiana.com\",\r\n    \"password\": \"fahmi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/users/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a-d3u4O62Yrbc9gpQUjY0j6/vAOT4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:03:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"8a10605f-184d-43eb-bb26-9a459b0172ba\",\n    \"name\": \"Fahmi\",\n    \"email\": \"fahmi@kodesiana.com\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Testing 3",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Testing",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Downloads/7409937_3616391 (1).jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/posts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Testing 1",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Testing",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Downloads/7409937_3616391 (1).jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/posts",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-9IGSQCALKOMB0qfo03M1AFQnsMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:16:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"019f474f-6094-49f9-9ee0-e05e451f8a92\",\n    \"title\": \"Testing 1\",\n    \"content\": \"Testing\",\n    \"imageUrl\": \"http://localhost:3000/uploads/019f474f-6094-49f9-9ee0-e05e451f8a92.jpg\",\n    \"createdAt\": \"2023-06-25T00:16:02.631Z\",\n    \"authorId\": \"8a10605f-184d-43eb-bb26-9a459b0172ba\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Testing 2",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Testing 2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/posts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Testing 2",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Testing 2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/posts/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-Mg8G+71n0zsqxHrxGSxwAt3SnjM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:17:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"019f474f-6094-49f9-9ee0-e05e451f8a92\",\n    \"title\": \"Testing 2\",\n    \"content\": \"Testing\",\n    \"imageUrl\": \"http://localhost:3000/uploads/019f474f-6094-49f9-9ee0-e05e451f8a92.jpg\",\n    \"createdAt\": \"2023-06-25T00:16:02.631Z\",\n    \"authorId\": \"8a10605f-184d-43eb-bb26-9a459b0172ba\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/posts?q=2&limit=10&page=1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "2"
+								},
+								{
+									"key": "orderBy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/posts?limit=10&page=1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderBy",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1297"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"511-HUH8y63Yv6BODSa1JSJdZvK78VQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:30:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"total\": 6,\n        \"totalPage\": 1,\n        \"count\": 6,\n        \"currentPage\": 1\n    },\n    \"data\": [\n        {\n            \"id\": \"019f474f-6094-49f9-9ee0-e05e451f8a92\",\n            \"title\": \"Testing 2\",\n            \"createdAt\": \"2023-06-25T00:16:02.631Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/019f474f-6094-49f9-9ee0-e05e451f8a92.jpg\",\n            \"author\": \"Fahmi\"\n        },\n        {\n            \"id\": \"ce446554-8499-4817-a8a0-2bbc678676fa\",\n            \"title\": \"Testing 1\",\n            \"createdAt\": \"2023-06-25T00:13:47.868Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/ce446554-8499-4817-a8a0-2bbc678676fa.jpg\",\n            \"author\": \"Fahmi\"\n        },\n        {\n            \"id\": \"1bfff1a8-8f3e-45e8-a47e-ce8a1303cee1\",\n            \"title\": \"Testing 1\",\n            \"createdAt\": \"2023-06-25T00:13:36.418Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/1bfff1a8-8f3e-45e8-a47e-ce8a1303cee1.jpg\",\n            \"author\": \"Fahmi\"\n        },\n        {\n            \"id\": \"584a2cbb-50bc-459a-b420-9708c9977960\",\n            \"title\": \"Testing 1\",\n            \"createdAt\": \"2023-06-25T00:12:54.452Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/584a2cbb-50bc-459a-b420-9708c9977960.jpg\",\n            \"author\": \"Fahmi\"\n        },\n        {\n            \"id\": \"b37f40c7-9412-4f34-b773-3384beccbc3f\",\n            \"title\": \"Testing 1\",\n            \"createdAt\": \"2023-06-25T00:12:38.089Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/b37f40c7-9412-4f34-b773-3384beccbc3f.jpg\",\n            \"author\": \"Fahmi\"\n        },\n        {\n            \"id\": \"3ca06d9c-50bb-4996-ae8a-94126f18c197\",\n            \"title\": \"Testing 1\",\n            \"createdAt\": \"2023-06-25T00:05:43.856Z\",\n            \"imageUrl\": \"http://localhost:3000/uploads/402ae9be7b41bbb8bb0e553a0413fada\",\n            \"author\": \"Fahmi\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/posts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/posts/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-Mg8G+71n0zsqxHrxGSxwAt3SnjM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:31:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"019f474f-6094-49f9-9ee0-e05e451f8a92\",\n    \"title\": \"Testing 2\",\n    \"content\": \"Testing\",\n    \"imageUrl\": \"http://localhost:3000/uploads/019f474f-6094-49f9-9ee0-e05e451f8a92.jpg\",\n    \"createdAt\": \"2023-06-25T00:16:02.631Z\",\n    \"authorId\": \"8a10605f-184d-43eb-bb26-9a459b0172ba\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/posts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/posts/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "019f474f-6094-49f9-9ee0-e05e451f8a92"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-XrW4VbXHKSS/geYbFMGFJouGuCc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Jun 2023 00:32:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhhMTA2MDVmLTE4NGQtNDNlYi1iYjI2LTlhNDU5YjAxNzJiYSIsIm5hbWUiOiJGYWhtaSIsImlhdCI6MTY4NzY1MTQyNiwiZXhwIjoxNjg3NjU1MDI2LCJhdWQiOiJVbmFzIiwiaXNzIjoiVW5hcyJ9.1zfQcZ_9zgleNvZ7f751rHwkAJdRdKB4ZIEAxKF_09s",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

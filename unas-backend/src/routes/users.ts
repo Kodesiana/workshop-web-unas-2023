@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import jwt from "jsonwebtoken";
 import { Router } from "express";
 import { v4 as uuid } from "uuid";
@@ -93,6 +94,7 @@ router.post("/api/v1/users/login", async (req, res) => {
 		id: user.id,
 		name: user.name,
 		token,
+		expiredAt: dayjs().add(config.jwt.expiresIn, "second").toISOString(),
 	});
 });
 

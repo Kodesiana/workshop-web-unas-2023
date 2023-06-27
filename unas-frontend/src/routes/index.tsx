@@ -8,7 +8,7 @@ import * as AdminPages from "@/pages/admin";
 
 function LoginRoute() {
 	const { user } = useContext(AuthContext);
-	if (user) {
+	if (user && user.expiredAt > new Date()) {
 		return <Navigate to="/admin" />;
 	}
 
@@ -16,8 +16,9 @@ function LoginRoute() {
 }
 
 function ProtectedRoute() {
-	const { user } = useContext(AuthContext);
-	if (!user) {
+	const { user, logout } = useContext(AuthContext);
+	if (!user || user.expiredAt < new Date()) {
+		logout();
 		return <Navigate to="/login" />;
 	}
 

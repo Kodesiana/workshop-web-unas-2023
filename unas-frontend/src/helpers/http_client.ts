@@ -19,4 +19,23 @@ instance.interceptors.request.use((config) => {
 	return config;
 });
 
+// intercept expired access token
+instance.interceptors.response.use(
+	(response) => response,
+	async (error) => {
+		// if the response is 401 Unauthorized, it's a token invalid error
+		if (error.response.status === 401) {
+			// clear the local storage and dispatch an event to notify other tabs
+			localStorage.clear();
+			window.dispatchEvent(new StorageEvent("storage"));
+			window.location.href = "/login";
+
+			// reject the promise with the error
+			return error;
+		}
+
+		return error;
+	},
+);
+
 export default instance;

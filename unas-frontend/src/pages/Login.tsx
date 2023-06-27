@@ -54,6 +54,7 @@ export function Login() {
 			id: loginRes.id,
 			name: loginRes.name,
 			token: loginRes.token,
+			expiredAt: loginRes.expiredAt,
 		});
 
 		// navigate to dashboard

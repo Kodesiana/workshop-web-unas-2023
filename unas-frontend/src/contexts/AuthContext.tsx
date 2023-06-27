@@ -1,12 +1,11 @@
-import { createContext } from "react";
-import { useMemo } from "react";
+import { createContext, useMemo } from "react";
 import { useLocalStorage } from "@mantine/hooks";
-import { Navigate } from "react-router-dom";
 
 export interface UserData {
 	id: string;
 	name: string;
 	token: string;
+	expiredAt: Date;
 }
 
 export interface AuthContext {
@@ -30,7 +29,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 	function logout() {
 		setUser(null);
-		return <Navigate to={"/"} />;
 	}
 
 	const memo = useMemo(() => ({ user, login, logout }), [user, login, logout]);

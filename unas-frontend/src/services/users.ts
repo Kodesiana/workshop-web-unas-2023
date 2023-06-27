@@ -17,7 +17,10 @@ export async function login(
 			return null;
 		}
 
-		return response.data;
+		return {
+			...response.data,
+			expiredAt: new Date(response.data.expiredAt)
+		};
 	} catch (err) {
 		console.error(err);
 		return null;

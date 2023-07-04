@@ -6,26 +6,26 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id                String    @id @db.VarChar(36)
-  email             String    @unique @db.VarChar(255)
-  name              String    @db.VarChar(255)
-  hashedPassword    String    @db.VarChar(60)
+  id                String    @id
+  email             String    @unique
+  name              String    
+  hashedPassword    String    
 
   posts             Post[]
 }
 
 model Post {
-  id                String    @id @db.VarChar(36)
-  title             String    @db.VarChar(255)
-  content           String?   @db.LongText
-  imageUrl          String?   @db.Text
+  id                String    @id
+  title             String    
+  content           String?   
+  imageUrl          String?   
   createdAt         DateTime  @default(now())
 
-  authorId          String    @db.VarChar(36)
+  authorId          String    
   author            User      @relation(fields: [authorId], references: [id])
 }
